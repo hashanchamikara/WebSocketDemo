@@ -21,7 +21,7 @@ and open the template in the editor.
         </ul>
     </body>
     <script>
-        var ws = new WebSocket("/ws");
+        var ws = new WebSocket("ws://localhost:8080/ws");
         ws.onmessage = function(data){
             $('#msgList').append('<li>'+data.data+'</li>');
         }

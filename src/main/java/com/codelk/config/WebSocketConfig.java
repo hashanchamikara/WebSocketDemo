@@ -18,7 +18,6 @@ public class WebSocketConfig implements WebSocketConfigurer {
 	@Override
 	public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
 		registry.addHandler(new TextHandler(), "/ws");
-		
 	}
 	
 	class TextHandler extends TextWebSocketHandler{
@@ -28,7 +27,6 @@ public class WebSocketConfig implements WebSocketConfigurer {
 		@Override
 		public void afterConnectionEstablished(WebSocketSession session) throws Exception {
 			sessions.add(session);
-			
 		}
 		
 		@Override
